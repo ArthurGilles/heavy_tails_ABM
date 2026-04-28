@@ -1,5 +1,6 @@
 # Emergence of Power Laws in Financial Markets and Seismic Activity: An Agent-Based Modelling Approach
 
+
 ## Installation
 
 NB : this paragraph describes how to install the required packages with a vanilla virtual environment. You are free to install them via conda, or globally.
@@ -14,17 +15,17 @@ Then, activate it and install the packages via :
 
 `pip install -r requirements.txt`
 
+
 ## General structure of the repository
 
-The repository is made of two main directories: `OFC` and `stock_market`, corresponding to the two models studied experimentally in the project. 
+The repository is made of two main directories: `seismic` and `stock_market`, corresponding to the two models studied experimentally in the project. 
 
+#### seismic
+
+The seismic directory contains all the code for the OFC simulations. To reproduce the figures, open and run the notebook, it imports all modules and generates all plots in order.
 
 #### stock_market
 The `stock_market` directory contains two folders, one for the empirical data gathered on the market and download with Yahoo Finance (`real_data`), and one implementing the Cont-Bouchaud model used to obtain the simulated theoretical results.
-
-#### OFC
-
-The OFC directory contains the code needed to create the core of the OFC simulations. It is organised with many packages (with `__init__.py`files). All those modules are then imported, to run all the code and display all the figures in a notebook. See directly the notebook to view how the figures were obtained.
 
 
 ## Running the scripts in stock_market
