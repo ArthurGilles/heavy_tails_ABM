@@ -25,20 +25,20 @@ The repository is made of two main directories: `seismic` and `stock_market`, co
 The seismic directory contains all the code for the OFC simulations. To reproduce the figures, open and run the notebook, it imports all modules and generates all plots in order.
 
 #### stock_market
-The `stock_market` directory contains two folders, one for the empirical data gathered on the market and download with Yahoo Finance (`real_data`), and one implementing the Cont-Bouchaud model used to obtain the simulated theoretical results.
+The `stock_market` directory contains two folders, one for the empirical data gathered on the market and downloaded with Yahoo Finance (`real_data`), and one implementing the Cont-Bouchaud model used to obtain the simulated theoretical results.
 
 
 ## Running the scripts in stock_market
 
 The `stock_market` folder contains all the scripts necessary to obtain the figures presented in the corresponding section of the report (and even more). To run those scripts you need to go to the root directory of the project, and use the `run.py` file with a specified option (list below):
 
-`python run.py [name_of_the_option]`
+`python run.py <name_of_the_option>`
 
 Here is the exhaustive list of the available options to run.
 
 - `stock_price_data`: displays the stock price of S&P500 and CAC40 over time, from the year 2000 up to 2024, as well as the distribution of the returns in log-log scale. Used to get Figure 1 and 2
 - `regression_returns_data`: displays the distribution of the returns of S&P500 and CAC40 over time in log-log scale, does a linear regression over the second regime (see report section 5.1) and plots it on top of the distribution. Used to get Figure 3
-- `cluster_size_CB`: given Erdős–Rényi graph (graph used in Cont-Bouchaud), plots the fraction of the nodes in the largest cluster as a function of the connectivity with `N=100 000` nodes. Used to get Figure 4
+- `cluster_size_CB`: given an Erdős–Rényi graph (graph used in Cont-Bouchaud), plots the fraction of the nodes in the largest cluster as a function of the connectivity with `N=100 000` nodes. Used to get Figure 4
 - `regression_simulated_returns`: using the Cont-Bouchaud model, simulates the distribution of the returns in log-log scale with the parameters matching the empirical data and does a linear regression on the tail. Used to get Figure 5
 - `stock_price_simulated`: simulates a stock price trajectory over time, simulated with the Cont-Bouchaud model with the parameters that adjust to the empirical data. Used to get Figure 6
 - `daily_returns_simulated`: Simulates the daily returns of some stocks using the Cont-Bouchaud model in three different regime (sub-critical, super-critical and critical), and plots the time series of the daily returns.
